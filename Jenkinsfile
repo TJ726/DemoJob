@@ -11,7 +11,7 @@ node('master')
 	}
 	stage('Run Test Case')
 	{
-		sh'''
+		bat'''
 		EXPORT LOC = $home/sample
 		rm $LOC
 		mkdir $LOC
