@@ -11,7 +11,7 @@ node('master')
 	}
 	stage('Run Test Case')
 	{
-		sh 'echo "test"'
+		bat 'echo "test"'
 		/*
 		sh'''
 		EXPORT LOC = $home/sample
