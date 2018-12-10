@@ -1,6 +1,6 @@
 node('master')
 {
-
+	agent any
 	stage('Git Cloning')
 	{
 		println "Cloning Repo"
@@ -11,13 +11,16 @@ node('master')
 	}
 	stage('Run Test Case')
 	{
-		sh’’’
-		export LOC = $home/sample
-		rm $LOC
-		mkdir $LOC
-		cd $LOC
-		echo "reached"		
-		‘’’
+		steps {
+                	sh 'echo "Hello World"'
+			sh’’’
+			export LOC = $home/sample
+			rm $LOC
+			mkdir $LOC
+			cd $LOC
+			echo "reached"		
+			‘’’
+		}
 	}
 	
 }
