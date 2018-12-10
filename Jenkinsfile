@@ -1,6 +1,5 @@
 node('master')
 {
-	agent any
 	stage('Git Cloning')
 	{
 		println "Cloning Repo"
@@ -22,5 +21,4 @@ node('master')
 			‘’’
 		}
 	}
-	
 }
