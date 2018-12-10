@@ -11,8 +11,6 @@ node('master')
 	}
 	stage('Run Test Case')
 	{
-		bat 'echo "test"'
-		/*
 		sh'''
 		EXPORT LOC = $home/sample
 		rm $LOC
@@ -20,7 +18,6 @@ node('master')
 		cd $LOC
 		echo "reached"		
 		'''
-		*/
 	}
 	
 }
