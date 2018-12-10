@@ -1,8 +1,23 @@
 node('master')
 {
 
-	stage('Test')
+	stage('Git Cloning')
 	{
-		println "Testing Job"
+		println "Cloning Repo"
+		git 'https://github.com/TJ726/DemoJob.git'
+
+		
+		
 	}
+	stage('Run Test Case')
+	{
+		sh'''
+		EXPORT LOC = $home/sample
+		rm $LOC
+		mkdir $LOC
+		cd $LOC
+		echo "reached"		
+		'''
+	}
+	
 }
