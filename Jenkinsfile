@@ -11,13 +11,15 @@ node('master')
 	}
 	stage('Run Test Case')
 	{
-		sh”””
-		export LOC = $home/sample
-		rm $LOC
-		mkdir $LOC
-		cd $LOC
-		echo "reached"		
-		“””
+		steps {
+			sh”””
+			export LOC = $home/sample
+			rm $LOC
+			mkdir $LOC
+			cd $LOC
+			echo "reached"		
+			“””
+		}
 	}
 	
 }
