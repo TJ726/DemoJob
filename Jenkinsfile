@@ -1,10 +1,10 @@
 import jenkins.model.*
 jenkins = Jenkins.instance
  	
-node(Master)
+node('master')
 {
 
-	stage("Test")
+	stage('Test')
 	{
 	}
 }
