@@ -12,7 +12,7 @@ node('master')
 	stage('Run Test Case')
 	{
 		sh’’’
-		EXPORT LOC = $home/sample
+		export LOC = $home/sample
 		rm $LOC
 		mkdir $LOC
 		cd $LOC
