@@ -1,10 +1,8 @@
-
- 	
 node('master')
 {
 
 	stage('Test')
 	{
-		sh "java -version"
+		println "Testing Job"
 	}
 }
